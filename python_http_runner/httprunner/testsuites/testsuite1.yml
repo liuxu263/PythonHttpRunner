@@ -1,0 +1,18 @@
+# -*- coding: utf-8 -*-
+config:
+    name: "testsuite1"
+    base_url: ${common_get(url)}
+
+testcases:
+-
+    name: feature1_testcase1
+    testcase: ../testcases/feature1/feature1_testcase1.yml
+-
+    name: feature1_testcase2
+    testcase: ../testcases/feature1/feature1_testcase2.yml
+-
+    name: feature2_testcase1
+    testcase: ../testcases/feature2/feature2_testcase1.yml
+-
+    name: feature2_testcase2
+    testcase: ../testcases/feature2/feature2_testcase2.yml

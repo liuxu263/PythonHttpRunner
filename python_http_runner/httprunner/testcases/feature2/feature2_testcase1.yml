@@ -1,0 +1,26 @@
+config:
+    name: "feature2_testcase1"
+    variables:
+        key1: ${common_get(xxx)}
+        key2: ${feature2_get(xxx)}
+
+teststeps:
+-
+    name: testcase1
+    api: ../api/feature2/feature2_api_get.yml
+    variables:
+        key1: $key1
+        key2: $key2
+    extract:
+        - token: content.token
+    validate:
+        - eq: ["status_code", 200]
+-
+    name: testcase2
+    api: ../api/feature2/feature2_api_post.yml
+    variables:
+        key1: $key1
+        key2: $key2
+        token: $token
+    validate:
+        - eq: ["status_code", 200]

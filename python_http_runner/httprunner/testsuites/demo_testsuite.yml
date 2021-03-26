@@ -8,11 +8,11 @@ config:
 testcases:
 -
     name: call demo_testcase with data 1
-    testcase: path/to/demo_testcase.yml
+    testcase: path/to/feature1_testcase1.yml
     variables:
         device_sn: $device_sn
 -
     name: call demo_testcase with data 2
-    testcase: path/to/demo_testcase.yml
+    testcase: path/to/feature1_testcase1.yml
     variables:
         device_sn: $device_sn
