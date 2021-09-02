@@ -1,6 +1,8 @@
-# -*- coding: utf-8 -*-
-from python_http_runner.httprunner.common.utils import get_data_from_yml
-from python_http_runner.httprunner.common.utils import get_url
+#! /user/bin/env python
+# -*- coding:utf-8 -*-
+
+from python_http_runner.src.common.utils import get_data_from_yml
+from python_http_runner.src.common.utils import get_url
 
 
 def common_get(*args):

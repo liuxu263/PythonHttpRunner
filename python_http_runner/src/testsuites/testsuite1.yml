@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 config:
-    name: "testsuite1"
+    name: "test_suite1"
     base_url: ${common_get(url)}
 
 testcases:

@@ -1,12 +1,12 @@
-# -*- coding: utf-8 -*-
+#! /user/bin/env python
+# -*- coding:utf-8 -*-
+
 import sys
 import os
+
 import yaml
 
-sys.path.append(os.path.abspath(os.path.dirname(os.path.dirname(os.path.dirname(__file__)))))
-sys.path.append(os.path.abspath(os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(__file__))))))
-
-from python_http_runner.httprunner.common.utils import send_result
+from python_http_runner.src.common.utils import send_result
 
 
 # 读取外部参数，并写入yml
@@ -21,7 +21,7 @@ def get_jenkins_input():
         key2 = sys.argv[3].split(',')
     else:
         os.system('echo Error: 输入参数的数量不正确！')
-    file = "python_http_runner/httprunner/common/config.yml"
+    file = os.path.dirname(__file__) + "python_http_runner/src/common/config.yml"
     with open(file, mode="w+", encoding="utf-8") as f:
         content["env"] = env
         content["key1"] = key1

@@ -1,5 +1,5 @@
 config:
-    name: "feature1_testcase2"
+    name: "feature1_test_case2"
     variables:
         key1: ${common_get(xxx)}
         key2: ${feature1_get(xxx)}

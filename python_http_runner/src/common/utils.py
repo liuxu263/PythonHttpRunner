@@ -1,3 +1,7 @@
+#! /user/bin/env python
+# -*- coding:utf-8 -*-
+
+import os
 import yaml
 
 
@@ -8,7 +12,7 @@ def get_data_from_yml(file=None):
 
 
 def get_env():
-    file = "../common/config"
+    file = os.path.dirname(__file__) + "common/config"
     content = get_data_from_yml(file)
     env = "TEST"
     if content["env"] == "LIVE":
@@ -29,4 +33,3 @@ def send_result(flag):
     flag = False
     if flag is True:
         pass
-
